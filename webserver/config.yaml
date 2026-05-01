@@ -1,0 +1,22 @@
+name: "Full Web Server"
+version: "1.0.0"
+slug: "full_web_server"
+description: "Server web NGINX complet (full option) care servește automat fișierele din folderul /share/webserver."
+arch:
+  - amd64
+  - aarch64
+  - armhf
+  - armv7
+  - i386
+init: false
+map:
+  - share:rw
+options:
+  autoindex: true
+schema:
+  autoindex: bool
+ports:
+  80/tcp: 8080
+ports_description:
+  80/tcp: "Portul extern prin care accesezi serverul web (default 8080)"
+image: "vlad2939/webserver-{arch}"
