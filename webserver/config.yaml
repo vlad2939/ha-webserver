@@ -1,7 +1,7 @@
 name: "Full Web Server"
-version: "1.0.1"
+version: "1.0.2"
 slug: "full_web_server"
-description: "Server web NGINX complet (full option) care servește automat fișierele din folderul /share/webserver."
+description: "Server web NGINX complet (full option) care servește automat fișierele din folderul /share/webserver. Acum cu suport Ingress!"
 arch:
   - amd64
   - aarch64
@@ -10,6 +10,10 @@ arch:
 init: false
 map:
   - share:rw
+ingress: true
+ingress_port: 80
+panel_icon: mdi:web
+panel_title: "Web Server"
 options:
   autoindex: true
 schema:
